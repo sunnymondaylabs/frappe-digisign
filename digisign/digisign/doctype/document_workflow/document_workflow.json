@@ -9,7 +9,9 @@
   "status",
   "signature_added",
   "signed_on",
-  "comments"
+  "comments",
+  "x_position",
+  "y_position"
  ],
  "fields": [
   {
@@ -43,12 +45,24 @@
    "fieldname": "comments",
    "fieldtype": "Small Text",
    "label": "Comments"
+  },
+  {
+   "default": "100",
+   "fieldname": "x_position",
+   "fieldtype": "Float",
+   "label": "X Position"
+  },
+  {
+   "default": "100",
+   "fieldname": "y_position",
+   "fieldtype": "Float",
+   "label": "Y Position"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-02-14 23:21:07.465025",
+ "modified": "2025-02-16 14:50:49.008501",
  "modified_by": "Administrator",
  "module": "Digisign",
  "name": "Document Workflow",
