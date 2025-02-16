@@ -39,7 +39,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-02-14 23:11:52.058193",
+ "modified": "2025-02-16 13:12:08.174534",
  "modified_by": "Administrator",
  "module": "Digisign",
  "name": "Document Template",
@@ -56,6 +56,15 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Employee",
+   "share": 1
   }
  ],
  "sort_field": "creation",
