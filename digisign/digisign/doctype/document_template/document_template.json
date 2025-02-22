@@ -6,7 +6,6 @@
  "engine": "InnoDB",
  "field_order": [
   "template_name",
-  "logo",
   "header",
   "content",
   "footer",
@@ -25,8 +24,7 @@
    "fieldname": "content",
    "fieldtype": "Text Editor",
    "in_list_view": 1,
-   "label": "Content",
-   "reqd": 1
+   "label": "Content"
   },
   {
    "fieldname": "signature_positions",
@@ -40,11 +38,6 @@
    "label": "Signature Position Section"
   },
   {
-   "fieldname": "logo",
-   "fieldtype": "Image",
-   "label": "Logo"
-  },
-  {
    "fieldname": "header",
    "fieldtype": "Text Editor",
    "label": "Header"
@@ -52,13 +45,12 @@
   {
    "fieldname": "footer",
    "fieldtype": "Text Editor",
-   "label": "Footer",
-   "reqd": 1
+   "label": "Footer"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-02-22 17:56:58.224668",
+ "modified": "2025-02-22 20:02:56.227929",
  "modified_by": "Administrator",
  "module": "Digisign",
  "name": "Document Template",
