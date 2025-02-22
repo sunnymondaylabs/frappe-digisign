@@ -5,6 +5,15 @@ app_description = "Digital Signing System"
 app_email = "info@sunnymonday.co.id"
 app_license = "mit"
 
+permission_query_conditions = {
+    "Document": "digisign.digisign.custom_permission.get_permission_query_conditions"
+}
+
+has_permission = {
+    "Document": "digisign.digisign.custom_permission.has_permission"
+}
+
+#search_filter = "digital_signing.custom_awesome_bar.custom_search_filter"
 # Apps
 # ------------------
 
