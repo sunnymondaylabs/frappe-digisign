@@ -1,0 +1,94 @@
+<div class="print-document">
+    <div class="page">
+        {%- if doc.title -%}
+        <h1 class="document-title">{{ doc.title }}</h1>
+        {%- endif -%}
+
+        <div class="content">
+            {{ doc.content }}
+
+            {%- if doc.signers -%}
+            {% for signer in doc.signers %}
+            {% if signer.status == "Approved" %}
+            <div class="signature-container" style="
+                        position: absolute; 
+                        left: calc({{ signer.x_position }}mm - 25mm);
+                        top: calc({{ signer.y_position }}mm - 25mm);
+                        width: 30mm;
+                    ">
+                {% if frappe.db.get_value("User", signer.user, "digital_signature") %}
+                <img src="{{ frappe.db.get_value('User', signer.user, 'digital_signature') }}" alt="Digital Signature"
+                    class="signature">
+                {% endif %}
+            </div>
+            {% endif %}
+            {% endfor %}
+            {%- endif -%}
+        </div>
+    </div>
+</div>
+<style>
+    @page {
+        size: A4;
+        margin: 15mm;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .print-document {
+        width: 180mm;
+        background: white;
+        color: #333;
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+    }
+
+    .page {
+        width: 180mm;
+        min-height: 267mm;
+        position: relative;
+        background: white;
+        overflow: hidden;
+    }
+
+    .content {
+        position: relative;
+        font-size: 14px;
+    }
+
+    .signature-container {
+        position: absolute;
+        page-break-inside: avoid;
+        z-index: 100;
+        text-align: center;
+    }
+
+    .signature {
+        max-height: 18mm;
+        max-width: 25mm;
+        display: block;
+        margin: 0 auto;
+    }
+
+    @media print {
+        body {
+            margin: 0;
+        }
+
+        .print-document {
+            margin: 0;
+            width: 180mm;
+        }
+
+        .page {
+            margin: 0;
+            width: 180mm;
+            page-break-after: always;
+        }
+    }
+</style>

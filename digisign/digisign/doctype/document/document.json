@@ -11,7 +11,8 @@
   "content",
   "workflow_section_section",
   "reviewers",
-  "signers"
+  "signers",
+  "page_number"
  ],
  "fields": [
   {
@@ -61,11 +62,18 @@
    "fieldname": "workflow_section_section",
    "fieldtype": "Section Break",
    "label": "Workflow Section"
+  },
+  {
+   "default": "1",
+   "fieldname": "page_number",
+   "fieldtype": "Int",
+   "label": "Signature Page Number",
+   "non_negative": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-02-22 19:52:11.229895",
+ "modified": "2025-02-24 00:49:36.648860",
  "modified_by": "Administrator",
  "module": "Digisign",
  "name": "Document",

@@ -34,11 +34,13 @@
    "default": "0",
    "fieldname": "signature_added",
    "fieldtype": "Check",
+   "hidden": 1,
    "label": "Signature Added"
   },
   {
    "fieldname": "signed_on",
    "fieldtype": "Datetime",
+   "hidden": 1,
    "label": "Signed On",
    "read_only": 1
   },
@@ -63,7 +65,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-02-22 20:04:14.848103",
+ "modified": "2025-02-23 01:01:05.073639",
  "modified_by": "Administrator",
  "module": "Digisign",
  "name": "Document Workflow",
