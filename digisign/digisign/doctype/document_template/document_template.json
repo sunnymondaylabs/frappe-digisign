@@ -6,9 +6,7 @@
  "engine": "InnoDB",
  "field_order": [
   "template_name",
-  "header",
   "content",
-  "footer",
   "signature_position_section_section",
   "signature_positions"
  ],
@@ -36,21 +34,11 @@
    "fieldname": "signature_position_section_section",
    "fieldtype": "Section Break",
    "label": "Signature Position Section"
-  },
-  {
-   "fieldname": "header",
-   "fieldtype": "Text Editor",
-   "label": "Header"
-  },
-  {
-   "fieldname": "footer",
-   "fieldtype": "Text Editor",
-   "label": "Footer"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-02-22 20:02:56.227929",
+ "modified": "2025-02-25 10:25:04.895682",
  "modified_by": "Administrator",
  "module": "Digisign",
  "name": "Document Template",
@@ -78,6 +66,7 @@
    "share": 1
   }
  ],
+ "show_title_field_in_link": 1,
  "sort_field": "creation",
  "sort_order": "DESC",
  "states": [],

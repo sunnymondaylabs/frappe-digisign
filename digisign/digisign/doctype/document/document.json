@@ -12,7 +12,8 @@
   "workflow_section_section",
   "reviewers",
   "signers",
-  "page_number"
+  "page_number",
+  "amended_from"
  ],
  "fields": [
   {
@@ -56,7 +57,8 @@
    "fieldname": "signers",
    "fieldtype": "Table",
    "label": "Signers",
-   "options": "Document Workflow"
+   "options": "Document Workflow",
+   "permlevel": 1
   },
   {
    "fieldname": "workflow_section_section",
@@ -67,13 +69,24 @@
    "default": "1",
    "fieldname": "page_number",
    "fieldtype": "Int",
+   "hidden": 1,
    "label": "Signature Page Number",
    "non_negative": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Document",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-02-24 00:49:36.648860",
+ "modified": "2025-02-25 13:50:26.750117",
  "modified_by": "Administrator",
  "module": "Digisign",
  "name": "Document",
@@ -103,10 +116,25 @@
    "role": "Employee",
    "share": 1,
    "write": 1
+  },
+  {
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "if_owner": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Employee",
+   "share": 1,
+   "write": 1
   }
  ],
  "sort_field": "creation",
  "sort_order": "DESC",
  "states": [],
- "title_field": "title"
+ "title_field": "title",
+ "track_changes": 1,
+ "track_seen": 1
 }
